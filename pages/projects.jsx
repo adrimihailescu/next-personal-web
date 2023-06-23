@@ -5,7 +5,7 @@ import ProjectCard from "@/components/cards/ProjectCard";
 export default function Projects(props) {
   console.log(props);
   return (
-    <div style={{ height: "100vh" }}>
+    <div>
       <h1>{props.title}</h1>
       <h2>{props.subtitle}</h2>
       <ul>

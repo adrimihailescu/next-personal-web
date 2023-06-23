@@ -6,7 +6,7 @@ export default function ProjectCard({ project }) {
     <li>
       <h3>{project.title}</h3>
       <Image
-        src={`https:${project.image.src}`}
+        src={"https:" + project.image.src}
         alt={project.image.alt}
         width="500"
         height="350"

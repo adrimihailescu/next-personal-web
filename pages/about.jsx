@@ -2,26 +2,14 @@ import { createClient } from "contentful";
 import { formatData } from "@/utils";
 
 export default function About(props) {
-  // const {
-  //   about: {
-  //     fields: {
-  //       title,
-  //       subtitle,
-  //       content: { content: contentData },
-  //     },
-  //   },
-  // } = props;
   console.log(props);
   return (
-    <div style={{ height: "100vh" }}>
+    <div>
       <h1>{props.title}</h1>
       <h2>{props.subtitle}</h2>
-      {/* {contentData.map((item, index) =>
-        item.content.map((subItem, subIndex) => (
-          <p key={`${index}-${subIndex}`}>{item.content[0].value}</p>
-        ))
-      )} */}
-      <p>{props.dataArray}</p>
+      {props.dataArray.map((contentItem, index) => (
+        <p key={index}>{contentItem}</p>
+      ))}
     </div>
   );
 }
