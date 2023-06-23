@@ -1,16 +1,17 @@
 import { createClient } from "contentful";
 import { formatData } from "@/utils";
+import Layout from "@/components/layout/layout";
 
 export default function About(props) {
   console.log(props);
   return (
-    <div>
+    <Layout>
       <h1>{props.title}</h1>
       <h2>{props.subtitle}</h2>
       {props.dataArray.map((contentItem, index) => (
         <p key={index}>{contentItem}</p>
       ))}
-    </div>
+    </Layout>
   );
 }
 

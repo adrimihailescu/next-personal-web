@@ -1,11 +1,12 @@
 import { createClient } from "contentful";
 import { formatData } from "@/utils";
 import ProjectCard from "@/components/cards/ProjectCard";
+import Layout from "@/components/layout/layout";
 
 export default function Projects(props) {
   console.log(props);
   return (
-    <div>
+    <Layout>
       <h1>{props.title}</h1>
       <h2>{props.subtitle}</h2>
       <ul>
@@ -13,7 +14,7 @@ export default function Projects(props) {
           <ProjectCard key={index} project={project} />
         ))}
       </ul>
-    </div>
+    </Layout>
   );
 }
 
