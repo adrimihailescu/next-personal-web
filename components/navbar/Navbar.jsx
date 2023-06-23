@@ -21,7 +21,7 @@ const links = [
 
 const Navbar = () => {
   return (
-    <div>
+    <div style={{ zIndex: "200", position: "absolute" }}>
       {links.map((link) => (
         <Link key={link.id} href={link.url}>
           {link.title}
