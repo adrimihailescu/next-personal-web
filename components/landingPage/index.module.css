@@ -20,9 +20,8 @@
 .header {
   font-size: 60px;
   font-weight: bold;
-  cursor: pointer;
   color: white;
-  /* -webkit-text-stroke: 3px white; */
+  text-shadow: 0px 0px 20px black;
   position: relative;
   margin-bottom: 10px;
 }
@@ -30,10 +29,20 @@
 .subtitle {
   font-size: 40px;
   margin-bottom: 10px;
+  position: relative;
+  text-shadow: 0px 0px 20px black;
 }
 
 .button {
   width: 100px;
   padding: 10px;
   border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+}
+
+.blob {
+  position: absolute !important;
+  top: 50%;
+  transform: translate(0, -50%);
 }
