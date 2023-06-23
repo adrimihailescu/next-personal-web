@@ -1,6 +1,6 @@
 import { createClient } from "contentful";
 import { formatData } from "@/utils";
-import Image from "next/image";
+import ProjectCard from "@/components/cards/ProjectCard";
 
 export default function Projects(props) {
   console.log(props);
@@ -10,21 +10,7 @@ export default function Projects(props) {
       <h2>{props.subtitle}</h2>
       <ul>
         {props.dataArray.map((project, index) => (
-          <li key={index}>
-            <h3>{project.title}</h3>
-            <Image
-              src={`https:${project.image.src}`}
-              alt={project.image.alt}
-              width="500"
-              height="350"
-            />
-            {Object.keys(project.links).map((link, key) => (
-              <a key={key} href={project.links[link]}>
-                {link}
-              </a>
-            ))}
-            <span>{project.tools.join("|")}</span>
-          </li>
+          <ProjectCard key={index} project={project} />
         ))}
       </ul>
     </div>
