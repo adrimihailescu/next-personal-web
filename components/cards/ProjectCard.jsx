@@ -3,8 +3,8 @@ import Image from "next/image";
 export default function ProjectCard({ project }) {
   const { title, image, links, tools } = project;
   return (
-    <li>
-      <h3>{project.title}</h3>
+    <li className="card">
+      <h3 className="projectTitle">{project.title}</h3>
       <Image
         src={"https:" + project.image.src}
         alt={project.image.alt}
@@ -17,11 +17,12 @@ export default function ProjectCard({ project }) {
           href={project.links[link]}
           target="_blank"
           rel="noreferrer"
+          className="link"
         >
           {link}
         </a>
       ))}
-      <span>{project.tools.join("|")}</span>
+      <span className="tools">{project.tools.join("|")}</span>
     </li>
   );
 }

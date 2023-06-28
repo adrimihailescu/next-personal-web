@@ -1,20 +1,22 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 import Blob from "../blob/Blob";
-import { Button, ContentWrapper, Subtitle, Title, Wrapper } from "./style";
+import styles from "./page.module.css";
 
 const HomePage = () => {
   const router = useRouter();
 
   return (
-    <Wrapper>
-      <Blob className="blob" />
-      <ContentWrapper>
-        <Title>Adriana Mihailescu</Title>
-        <Subtitle>Frontend Developer</Subtitle>
-        <Button onClick={() => router.push("/about")}>See more</Button>
-      </ContentWrapper>
-    </Wrapper>
+    <main className={styles.main}>
+      <Blob className={styles.blob} />
+      <div className={styles.content}>
+        <h1 className={styles.title}>Adriana Mihailescu</h1>
+        <h2 className={styles.subtitle}>Frontend Developer</h2>
+        <button className={styles.button} onClick={() => router.push("/about")}>
+          See more
+        </button>
+      </div>
+    </main>
   );
 };
 

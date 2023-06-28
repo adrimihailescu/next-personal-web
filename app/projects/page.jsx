@@ -19,7 +19,7 @@ export default async function Projects() {
   const data = await getData();
 
   return (
-    <>
+    <main>
       <h1>{data.title}</h1>
       <h2>{data.subtitle}</h2>
       <ul>
@@ -27,6 +27,6 @@ export default async function Projects() {
           <ProjectCard key={index} project={project} />
         ))}
       </ul>
-    </>
+    </main>
   );
 }

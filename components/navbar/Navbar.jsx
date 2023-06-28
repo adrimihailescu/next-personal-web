@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import styles from "./page.module.css";
 
 const links = [
   {
@@ -21,13 +22,13 @@ const links = [
 
 const Navbar = () => {
   return (
-    <div style={{ zIndex: "200", position: "absolute" }}>
+    <nav className={styles.navigation}>
       {links.map((link) => (
-        <Link key={link.id} href={link.url}>
+        <Link key={link.id} href={link.url} className={styles.link}>
           {link.title}
         </Link>
       ))}
-    </div>
+    </nav>
   );
 };
 

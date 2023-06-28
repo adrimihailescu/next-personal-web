@@ -9,7 +9,7 @@ const Blob = (props) => {
       <mesh scale={2}>
         <ambientLight />
         <sphereGeometry args={[1, 64, 64]} />
-        <MeshDistortMaterial roughness={0} speed={4}>
+        <MeshDistortMaterial roughness={0} speed={2}>
           <GradientTexture
             stops={[0, 0.8, 1]}
             colors={["#e63946", "#f1faee", "#a8dadc"]}
