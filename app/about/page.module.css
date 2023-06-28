@@ -1,0 +1,33 @@
+.main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-top: 200px;
+  padding: 10px;
+  align-items: center;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 30px;
+  font-size: 60px;
+}
+
+.subtitle {
+  margin-bottom: 40px;
+  font-size: 40px;
+}
+
+.content {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 20px;
+  flex-wrap: wrap;
+  padding: 10px;
+  /* border-radius: 30px;
+  border: 10px solid rgba(0, 212, 255, 1); */
+}
+
+.contentItem {
+  margin-bottom: 20px;
+}

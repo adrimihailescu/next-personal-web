@@ -1,5 +1,6 @@
 import { createClient } from "contentful";
 import { formatData } from "@/utils";
+import styles from "./page.module.css";
 
 const getData = async () => {
   const client = createClient({
@@ -18,12 +19,16 @@ export default async function About() {
   const data = await getData();
 
   return (
-    <div style={{ height: "100vh" }}>
-      <h1>{data.title}</h1>
-      <h2>{data.subtitle}</h2>
-      {data.dataArray.map((contentItem, index) => (
-        <p key={index}>{contentItem}</p>
-      ))}
-    </div>
+    <main className={styles.main}>
+      <h1 className={styles.title}>{data.title}</h1>
+      <h2 className={styles.subtitle}>{data.subtitle}</h2>
+      <div className={styles.content}>
+        {data.dataArray.map((contentItem, index) => (
+          <p key={index} className={styles.contentItem}>
+            {contentItem}
+          </p>
+        ))}
+      </div>
+    </main>
   );
 }
